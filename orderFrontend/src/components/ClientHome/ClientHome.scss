@@ -6,7 +6,18 @@
 .header{
     background-color: $dark;
     color: $ligth;
-    
+    padding: 0.5% 7% 0.5% 7%;
+    h3{
+        font-size: 1.8rem;
+    }
+    .orderview{
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+    .orderview:hover{
+        font-weight: 500;
+        color: $yellow;
+    }
 }
 
 .products{
@@ -19,3 +30,5 @@
         padding: 20px;
     }
 }
+
+
