@@ -1,0 +1,21 @@
+@import '../../assets/scss/variables.scss';
+
+.row{
+    margin: 0px !important;
+}
+.header{
+    background-color: $dark;
+    color: $ligth;
+    
+}
+
+.products{
+    text-align: center;
+    height: 1000px;
+    background-color: $red;
+    .card{
+        background-color: $yellow;
+        margin: 30px;
+        padding: 20px;
+    }
+}
