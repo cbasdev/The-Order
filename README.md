@@ -16,14 +16,17 @@ Se implementó la funcionalidad de toma de pedido por parte del cliente, donde e
 
 ## Desarrollado en:
 
-* Backend: Django 
-* Frontend: ReactJS
-* Base de Datos: Sqlite3
+<ul>
+    <li>Backend: <p style="color:green; display: inline-block">Django</p></li>
+    <li>Frontend: <p style="color:blue; display: inline-block">ReactJS</p></li>
+    <li>Base de datos: <p style="color:red; display: inline-block">Sqlite3</p></li>
+</ul>
+
 
 
 ## Modelo de Datos :bar_chart:
 <p align="center">
-  <img width="781" height="476" src="https://raw.githubusercontent.com/edilsonlonC/HPC/master/matrix-mult/assets/results_times.png">
+  <img width="785" height="621" src="https://raw.githubusercontent.com/SebasttianVelez/The-Order/master/assets/diagram.png">
 </p>
 
 ## Historias de Usuario
@@ -33,13 +36,13 @@ Se implementó la funcionalidad de toma de pedido por parte del cliente, donde e
 * Cliente
 * Trabajador
 * Administrador
-
-1. Como Cliente quiero crear un pedido para que se genere una orden de productos que se han solicitado
-2. Como Trabajador quiero modificar el estado de una orden para que el Cliente sea despachado
-3. Como Administrador quiero agregar productos para que los pedidos tengan mas opciones
-4. Como Trabajador quiero imprimir la factura de una orden para que el Cliente pueda realizar el pago
-5. Como Cliente quiero agregar observaciones a mi pedido para que la orden se genere de forma personalizada
-6. Como Cliente quiero elegir si el pedido es para comer en el restaurante o para llevar
+---
+* Como Cliente quiero crear un pedido para que se genere una orden de productos que se han solicitado
+* Como Trabajador quiero modificar el estado de una orden para que el Cliente sea despachado
+* Como Administrador quiero agregar productos para que los pedidos tengan mas opciones
+* Como Trabajador quiero imprimir la factura de una orden para que el Cliente pueda realizar el pago
+* Como Cliente quiero agregar observaciones a mi pedido para que la orden se genere de forma personalizada
+* Como Cliente quiero elegir si el pedido es para comer en el restaurante o para llevar
 
 ## Contribuciones :busts_in_silhouette:
 
