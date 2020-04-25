@@ -10,7 +10,7 @@ git clone https://github.com/SebasttianVelez/The-Order
 ## Caracteristicas del Programa :mag:
 
 <p align="justify">
-Se implementó la funcionalidad de toma de pedido por parte del cliente, donde en una ventana puede realizar la selección de sus productos, agregandolos a un carrito de compras. Al final el cliente podrá realizar el pedido viendo su precio total, agregando observaciones y registrando su nombre.
+Se implementó la funcionalidad de toma de pedido por parte del cliente, donde en una ventana puede realizar la selección de sus productos, agregandolos a un carrito de compras. Al final el cliente podrá realizar el pedido viendo su precio total, agregando observaciones y registrando un nombre a su pedido.
 </p>
 
 
