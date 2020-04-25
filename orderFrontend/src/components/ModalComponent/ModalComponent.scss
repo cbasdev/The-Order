@@ -1,1 +1,17 @@
-.ModalComponent {}
+
+
+.modal{
+    text-align: center;
+    .iconCart{
+        font-size: 5rem;
+    }
+    li{
+        list-style: none;
+    }
+}
+
+.total{
+    font-size: 1.3rem;
+    font-weight: 700;
+
+}

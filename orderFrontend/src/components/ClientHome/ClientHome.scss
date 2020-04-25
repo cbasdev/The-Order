@@ -4,6 +4,8 @@
     margin: 0px !important;
 }
 .header{
+    border-top: 2px solid $yellow;
+    border-bottom:2px solid $yellow;
     background-color: $dark;
     color: $ligth;
     padding: 0.5% 7% 0.5% 7%;
@@ -22,13 +24,22 @@
 
 .products{
     text-align: center;
-    height: 1000px;
     background-color: $red;
     .card{
-        background-color: $yellow;
+        color: $ligth;
+        background-color: $dark;
         margin: 30px;
         padding: 20px;
+        border-bottom: 5px solid $yellow;
+    }
+    .image-product{
+        img{
+            border-radius: 10px;
+            width: 300px;
+        }
+        margin-bottom: 30px;
     }
 }
+
 
 
