@@ -1,33 +1,35 @@
-import React, { Component } from "react";
-import "./ClientHome.scss";
-import axios from "axios";
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React, { Component } from "react"
+import "./ClientHome.scss"
+import axios from "axios"
+import { toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 // External Components
-import ModalComponent from "../ModalComponent/ModalComponent";
+import ModalComponent from "../ModalComponent/ModalComponent"
 
 // get our fontawesome imports
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 toast.configure()
 
 class ClientHome extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       products: {},
       status: null,
       order: [],
       addModalShow: false,
-    };
+    }
   }
 
+  // This method is executed will mounting the component
   componentWillMount() {
-    this.getProducts();
+    this.getProducts()
   }
 
+  // Arrow function to send get request to products of API
   getProducts = () => {
     axios
       .get("http://127.0.0.1:8000/api/v1.0/products/?format=json")
@@ -35,27 +37,24 @@ class ClientHome extends Component {
         this.setState({
           products: res.data,
           status: "success",
-        });
-        
-      });
-  };
+        })
+      })
+  }
 
+  // Async function to set new product in a cart
   async addShoppingCart(product) {
     await this.setState({
       order: this.state.order.concat([product]),
-    });
+    })
   }
 
-
-
-  notify = () =>{
-    toast.success('Producto añadido al pedido!')
+  // Show alert in browser with module toast
+  notify = () => {
+    toast.success("Producto añadido al pedido!")
   }
 
-
-  
   render() {
-    let addModalClose = () => this.setState({ addModalShow: false });
+    let addModalClose = () => this.setState({ addModalShow: false })
     return (
       <div className="ClientHome">
         <ModalComponent
@@ -89,7 +88,7 @@ class ClientHome extends Component {
                   </div>
                   <button
                     onClick={() => {
-                      this.addShoppingCart(product);
+                      this.addShoppingCart(product)
                       this.notify()
                     }}
                     className="btn btn-warning"
@@ -97,12 +96,12 @@ class ClientHome extends Component {
                     Agregar Al Pedido
                   </button>
                 </div>
-              );
+              )
             })}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default ClientHome;
+export default ClientHome

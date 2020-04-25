@@ -1,4 +1,4 @@
-
+@import '../../assets/scss/variables.scss';
 
 .modal{
     text-align: center;
@@ -15,3 +15,39 @@
     font-weight: 700;
 
 }
+
+form {
+    .form-group {
+        display: inline;
+        padding: 0 3% 0 3%;
+
+
+    }
+    .text-input{
+        padding: 6px;
+        border: 0;
+         border-bottom: 2px solid #9b9b9b;
+         width: 40%;
+         transition: 0.3s;
+    }
+    .text-input:focus{
+        outline: none;
+        border: 2px solid $yellow;
+    }
+
+    .radiobuttons{
+        margin-top: 19px;
+        display: block;
+        .radio-rigth{
+            margin-left: 2%;
+        }
+        span{
+            margin-left: 1%;
+        }
+
+
+    }
+}
+
+
+
