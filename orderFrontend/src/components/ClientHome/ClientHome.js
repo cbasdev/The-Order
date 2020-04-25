@@ -36,6 +36,7 @@ class ClientHome extends Component {
           products: res.data,
           status: "success",
         });
+        
       });
   };
 
