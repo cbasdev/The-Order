@@ -16,7 +16,8 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "react-toastify": "^5.5.0"
+    "react-toastify": "^5.5.0",
+    "simple-react-validator": "^1.4.6"
   },
   "scripts": {
     "start": "react-scripts start",

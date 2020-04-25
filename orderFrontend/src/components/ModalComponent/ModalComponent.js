@@ -1,21 +1,25 @@
-import React, { Component } from "react";
-import "./ModalComponent.scss";
-import { Modal, Button } from "react-bootstrap";
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import React, { Component } from "react"
+import "./ModalComponent.scss"
 
-import axios from 'axios'
+//Bootstrap
+import { Modal, Button } from "react-bootstrap"
 
-// get our fontawesome imports
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Toast
+import { toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
+import axios from "axios"
+
+// Get our fontawesome imports
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+// Simple Forms Validators
+import SimpleReactValidator from "simple-react-validator"
 
 toast.configure()
 
-
 class ModalComponent extends Component {
-
   name_orderRef = React.createRef()
   observationsRef = React.createRef()
   status_falseRef = React.createRef()
@@ -24,13 +28,15 @@ class ModalComponent extends Component {
     order: {},
   }
 
-
+  componentWillMount() {
+    this.validator = new SimpleReactValidator()
+  }
   sendOrder = (event) => {
     event.preventDefault()
     var status_place = 1
-    if(this.status_trueRef.current.checked){
+    if (this.status_trueRef.current.checked) {
       status_place = 1
-    }else{
+    } else {
       status_place = 0
     }
 
@@ -51,33 +57,31 @@ class ModalComponent extends Component {
       products: id_products,
     }
 
-
     //post
-
-    axios.post('http://localhost:8000/api/v1.0/order/', order)
-      .then(res=>{
-        if(res.data.products){
-        toast.success('Orden enviada satisfactoriamente!')
-
-          console.log('Orden GENERADA')
-        }
-        else{
-          console.log('Orden Rechazada')
+    if (
+      order.name_order !== "" &&
+      order.total_price !== 0 &&
+      order.observations !== "" &&
+      order.status_place !== ""
+    ) {
+      axios.post("http://localhost:8000/api/v1.0/order/", order).then((res) => {
+        if (res.data.products) {
+          toast.success("Orden enviada satisfactoriamente!")
+        } else {
+          toast.dismiss("No se pudo realizar la Orden!")
         }
       })
-
-    console.log('Formulario Enviado', order)   
+    } else {
+      toast.error("No se pudo realizar la Orden!")
+    }
   }
 
-
-
-
   render() {
-    const shoppingcart = this.props.shoppingcart;
-    
-    var total = 0;
+    const shoppingcart = this.props.shoppingcart
+
+    var total = 0
     for (const key in this.props.shoppingcart) {
-      total += shoppingcart[key].price;
+      total += shoppingcart[key].price
     }
     return (
       <Modal
@@ -113,43 +117,73 @@ class ModalComponent extends Component {
                     <td>{product.description}</td>
                     <td>${product.price}</td>
                   </tr>
-                );
+                )
               })}
             </tbody>
           </table>
         </Modal.Body>
-        <form className="mid-form" onSubmit={this.sendOrder}>
-          <div className="form-group">
-            <label>Nombre del Pedido: </label>
-            <input type="text" name="name_order" ref={this.name_orderRef} />
-          </div>
-          <div className="form-group">
-            <label>Observaciones: </label>
-            <input type="text" name="observations" ref={this.observationsRef} />
-          </div>
-          <div className="form-group">
-            <input type="radio" name="status_place" value="False" ref={this.status_falseRef} /> Para Llevar
-            <input type="radio" name="status_place" value="True " ref={this.status_trueRef} /> Para
-            Consumir Aqui
-          </div>
-          
-        <Modal.Footer>
-          <span className="total">Total: ${total}</span>
-          <input
-            type="submit"
-            value="Realizar Pedido"
-            className="btn btn-warning"
-            onClick={this.props.onHide}
-          />
-          <Button className="btn btn-danger" onClick={this.props.onHide}>
-            Close
-          </Button>
-        </Modal.Footer>
-        </form>
+        <form className="md-form" onSubmit={this.sendOrder}>
+          <div className="form-group name_order md-form">
+            <input
+              className="text-input"
+              type="text"
+              name="name_order"
+              ref={this.name_orderRef}
+              placeholder="Nombre de la Orden"
+            />
 
+            {this.validator.message(
+              "name_order",
+              this.state.order.name_order,
+              "required"
+            )}
+          </div>
+
+          <div className="form-group observations">
+            <input
+              className="text-input"
+              type="text"
+              name="observations"
+              ref={this.observationsRef}
+              placeholder="Observaciones"
+            />
+          </div>
+
+          <div className="form-group radiobuttons">
+            <input
+              className="radio- 2"
+              type="radio"
+              name="status_place"
+              value="False"
+              ref={this.status_falseRef}
+            />
+            <span>Para Llevar</span>
+            <input
+              className="radio radio-rigth"
+              type="radio"
+              name="status_place"
+              value="True "
+              ref={this.status_trueRef}
+            />
+            <span>Para Consumir Aqui</span>
+          </div>
+
+          <Modal.Footer>
+            <span className="total">Total: ${total}</span>
+            <input
+              type="submit"
+              value="Realizar Pedido"
+              className="btn btn-warning"
+              onClick={this.props.onHide}
+            />
+            <Button className="btn btn-danger" onClick={this.props.onHide}>
+              Cerrar
+            </Button>
+          </Modal.Footer>
+        </form>
       </Modal>
-    );
+    )
   }
 }
 
-export default ModalComponent;
+export default ModalComponent

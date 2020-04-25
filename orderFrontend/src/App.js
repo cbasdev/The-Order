@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import './assets/scss/App.scss';
+import './assets/scss/App.scss'
 
 
 
@@ -12,9 +12,8 @@ function App() {
   return (
     <div className="App">
       <ClientHome />
-      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
