@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Modiface Demo App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="../../sdk.js"></script>
+        <script src="./init.js"></script>
+        <script src="./utils/startTryOn.js"></script>
+        <script src="./utils/uploadImage.js"></script>
+    </head>
+    <body>
+        <div id="app-container">
+            <div id="title-text">Modiface Makeup Demo</div>
+            <div id="live-mode-button" class="mode-button" onclick="startTryOn('live')">start live</div>
+            <input type="file" accept="image/jpeg, image/png" name="image" id="image-upload" onchange="uploadImage(event)" style="display: none;">
+            <div id="photo-mode-button" class="mode-button" onclick="firefoxFirstClick();startTryOn('photo')">upload photo</div>
+            <div id="orig-canvas-container" class="canvas-container"></div>
+            <div id="rendered-canvas-container" class="canvas-container"></div>
+            <div id="ui-interface">
+                <div id="compare-slider" ontouchstart="touchSlide(event)" onmousedown="mouseSlide(event)">
+                    <img id="compare-drag" draggable="false">
+                </div>
+                <div class="makeup-type-container">
+                    <div id="eyeshadow-box" class="selection-box" onclick="selectMakeupCategory('eyeshadow')">eyeshadow</div>
+                    <div id="lipcolor-box" class="selection-box gray-hover" onclick="selectMakeupCategory('lipcolor')">lipcolor</div>
+                </div>
+                <div class="swatch-background">
+                    <div id="eyeshadow-swatch-container" class="swatch-container">
+                        <img id="eyeshadow-swatch-swatch1" class="eyeshadow-swatch swatch" onclick="toggleMakeup('eyeshadow','swatch1')">
+                        <img id="eyeshadow-swatch-swatch2" class="eyeshadow-swatch swatch" onclick="toggleMakeup('eyeshadow','swatch2')">
+                        <img id="eyeshadow-swatch-swatch3" class="eyeshadow-swatch swatch" onclick="toggleMakeup('eyeshadow','swatch3')">
+                        <img id="eyeshadow-swatch-swatch4" class="eyeshadow-swatch swatch" onclick="toggleMakeup('eyeshadow','swatch4')">
+                        <img id="eyeshadow-swatch-swatch5" class="eyeshadow-swatch swatch" onclick="toggleMakeup('eyeshadow','swatch5')">
+                    </div>
+                    <div id="lipcolor-swatch-container" class="swatch-container">
+                        <img id="lipcolor-swatch-swatch1" class="lipcolor-swatch swatch" onclick="toggleMakeup('lipcolor','swatch1')">
+                        <img id="lipcolor-swatch-swatch2" class="lipcolor-swatch swatch" onclick="toggleMakeup('lipcolor','swatch2')">
+                        <img id="lipcolor-swatch-swatch3" class="lipcolor-swatch swatch" onclick="toggleMakeup('lipcolor','swatch3')">
+                        <img id="lipcolor-swatch-swatch4" class="lipcolor-swatch swatch" onclick="toggleMakeup('lipcolor','swatch4')">
+                        <img id="lipcolor-swatch-swatch5" class="lipcolor-swatch swatch" onclick="toggleMakeup('lipcolor','swatch5')">
+                    </div>
+                </div>
+                <div id="cta-container">
+                    <img id="adjust-collapse-cta" class="cta-button moveable-button" onclick="collapseAllAdjustButtons()">
+                    <img id="adjust-left-eye-cta" class="cta-button moveable-button" onclick="adjustFeature('leftExtendedEye2D')">
+                    <img id="adjust-right-eye-cta" class="cta-button moveable-button" onclick="adjustFeature('rightExtendedEye2D')">
+                    <img id="adjust-lips-cta" class="cta-button moveable-button" onclick="adjustFeature('extendedOuterMouth2D')">
+                    <img id="adjust-cta" class="cta-button" onclick="expandAllAdjustButtons()">
+                    <img id="before-after-cta" class="cta-button" onclick="toggleBeforeAfter()">
+                </div>
+                <img id="close-button" onclick="stopMakeupApp()">
+            </div>
+            <div id="adjust-container"></div>
+            <div id="instruction-panel">
+                <div id="instruction-text">Adjust the dots to outline your <span id="feature-text">lips</span></div>
+                <img id="left-adjust-image" class="adjust-image">
+                <img id="right-adjust-image" class="adjust-image">
+                <div id="mouth-open-chk">
+                    <div id="toggle-mouth" onclick="toggleMouth()" class="checkbox">
+                        <img id="checkmark">
+                    </div>
+                    <span id="mouth-open-text">Mouth is open</span>
+                </div>
+            </div>
+            <div onclick="saveCoords()" id="save-coords" class="save-cancel">SAVE DOTS</div>
+            <div onclick="disableAdjustButtons()" id="adjust-cancel">
+                <span id="cancel-text">Cancel</span></div>
+            <div onclick="revertToOriginal()" id="adjust-reset" class="save-cancel">RESET DOTS</div>
+            <img id="gif-loader">
+            <div id="loading-overlay"></div>
+            <div id="error-screen">
+                <div id="error-title">OOPS...</div>
+                <div id="error-text">SOMETHING WENT WRONG</div>
+                <div id="try-again-button" onclick="closeErrorScreen()">OK</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,297 @@
+{
+    "products": {
+        "lorealparis": {},
+        "maybellineapac": {},
+        "maybellineeu": {},
+        "test": {
+            "lipcolor": {
+                "3605971155352": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "metallicIntensity": 0.7,
+                            "lustre": 0.8,
+                            "glossDetail": 0.42,
+                            "gloss": 2.8,
+                            "textureBoost": -1,
+                            "colorR": 202,
+                            "colorG": 48,
+                            "colorB": 121,
+                            "category": "lipcolor"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "319026548": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "gloss": 1.15,
+                            "sparkleIntensity": 0,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "glossDetail": 0,
+                            "colorR": 138,
+                            "colorG": 30,
+                            "colorB": 54,
+                            "textureBoost": 0.8,
+                            "category": "lipcolor"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "478776353": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "gloss": 5,
+                            "sparkleIntensity": 0,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "glossDetail": 0,
+                            "colorR": 12,
+                            "colorG": 114,
+                            "colorB": 138,
+                            "envMappingIntensity": 0,
+                            "placement": "",
+                            "lipVolume": 0,
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "envMappingR": 255,
+                            "envMappingG": 255,
+                            "envMappingB": 255,
+                            "wetness": 0,
+                            "envMappingBumpIntensity": 0.6,
+                            "envMappingCurve": 2.3,
+                            "envMappingRotationY": 0,
+                            "presetStyle": "MFEMakeupLipstickStyleDefault",
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "matteness": 0,
+                            "category": "lipcolor",
+                            "useIntenseDynamicColorParameters": true
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "816803574": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "gloss": 5,
+                            "sparkleIntensity": 0,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "glossDetail": 0,
+                            "colorR": 156,
+                            "colorG": 81,
+                            "colorB": 91,
+                            "envMappingIntensity": 0,
+                            "placement": "",
+                            "lipVolume": 0,
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "envMappingR": 255,
+                            "envMappingG": 255,
+                            "envMappingB": 255,
+                            "wetness": 0,
+                            "envMappingBumpIntensity": 0.6,
+                            "envMappingCurve": 2.3,
+                            "envMappingRotationY": 0,
+                            "presetStyle": "MFEMakeupLipstickStyleDefault",
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "matteness": 0,
+                            "category": "lipcolor"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "916495938": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "gloss": 0,
+                            "sparkleIntensity": 0,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "glossDetail": 0,
+                            "colorR": 74,
+                            "colorG": 17,
+                            "colorB": 79,
+                            "envMappingIntensity": 0,
+                            "placement": "",
+                            "lipVolume": 0,
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "envMappingR": 255,
+                            "envMappingG": 255,
+                            "envMappingB": 255,
+                            "wetness": 0,
+                            "envMappingBumpIntensity": 0.6,
+                            "envMappingCurve": 2.3,
+                            "envMappingRotationY": 0,
+                            "presetStyle": "MFEMakeupLipstickStyleDefault",
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "matteness": 0,
+                            "category": "lipcolor",
+                            "useLegacyGlitter": true
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                }
+            },
+            "eyeshadow": {
+                "20000103": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 1,
+                            "colorR": 16,
+                            "colorG": 158,
+                            "colorB": 99,
+                            "twinkleIntensity": 1,
+                            "twinkleR": 255,
+                            "twinkleG": 255,
+                            "twinkleB": 255,
+                            "twinkleDensity": 0.5,
+                            "twinkleSize": 0.8,
+                        
+                            "category": "eyeshadow"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "487369973": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 0.92,
+                            "gloss": 0,
+                            "sparkleIntensity": 0.5,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "colorR": 213,
+                            "colorG": 151,
+                            "colorB": 114,
+                            "placement": "",
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "skinGlow": 0,
+                            "metallicIntensity": 0,
+                            "vinylIntensity": 0,
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "category": "eyeshadow",
+                            "useLegacyGlitter": true
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "953508448": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 0.92,
+                            "gloss": 0,
+                            "sparkleIntensity": 0.5,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "colorR": 131,
+                            "colorG": 68,
+                            "colorB": 58,
+                            "placement": "",
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "skinGlow": 0,
+                            "metallicIntensity": 0,
+                            "vinylIntensity": 0,
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "category": "eyeshadow",
+                            "useIntenseDynamicColorParameters": true
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "357413140": {
+                    "shadeArray": [
+                        {
+                            "colorA": 255,
+                            "intensity": 0.92,
+                            "gloss": 0,
+                            "sparkleIntensity": 0.5,
+                            "sparkleR": 255,
+                            "sparkleG": 210,
+                            "sparkleB": 230,
+                            "colorR": 129,
+                            "colorG": 79,
+                            "colorB": 61,
+                            "placement": "",
+                            "sparkleDensity": 0.12,
+                            "sparkleSize": 3,
+                            "sparkleColorVariation": 0,
+                            "sparkleSizeVariation": 0,
+                            "sparkleBaseReflectivity": 0.7,
+                            "skinGlow": 0,
+                            "metallicIntensity": 0,
+                            "vinylIntensity": 0,
+                            "family": null,
+                            "finish": "",
+                            "sub_category": "",
+                            "category": "eyeshadow"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                },
+                "343113733": {
+                    "shadeArray": [
+                        {
+                            "colorA": 100,
+                            "intensity": 1,
+                            "category": "eyeshadow"
+                        }
+                    ],
+                    "countryCode": "GLOBAL"
+                }
+            },
+            "foundation": {},
+            "brow": {},
+            "highlight": {}
+        },
+        "testcompetitivebrand": []
+    },
+    "cmsVersion": "v3.5"
+}

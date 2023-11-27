@@ -1,0 +1,151 @@
+{
+    "version": 1,
+    "numGridRows": 20,
+    "numGridCols": 15,
+    "width": 400,
+    "height": 500,
+    "side": "none",
+    "referencePoints": [
+        {
+            "loc": "adjusted.nose",
+            "points": [
+                {
+                    "index": 0,
+                    "x": 152,
+                    "y": 44
+                },
+                {
+                    "index": 1,
+                    "x": 106,
+                    "y": 216
+                },
+                {
+                    "index": 2,
+                    "x": 34,
+                    "y": 444
+                },
+                {
+                    "index": 3,
+                    "x": 112,
+                    "y": 462
+                },
+                {
+                    "index": 4,
+                    "x": 196,
+                    "y": 474
+                },
+                {
+                    "index": 5,
+                    "x": 280,
+                    "y": 465
+                },
+                {
+                    "index": 6,
+                    "x": 361,
+                    "y": 435
+                },
+                {
+                    "index": 7,
+                    "x": 294,
+                    "y": 216
+                },
+                {
+                    "index": 8,
+                    "x": 246,
+                    "y": 44
+                },
+                {
+                    "index": 9,
+                    "x": 208,
+                    "y": 134
+                },
+                {
+                    "index": 10,
+                    "x": 206,
+                    "y": 340
+                }
+            ]
+        }
+    ],
+    "translation": {
+        "type": "face-ref",
+        "point": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "point",
+                "loc": "adjusted.nose",
+                "index": 9
+            },
+            "to": {
+                "type": "point",
+                "loc": "adjusted.nose",
+                "index": 10
+            }
+        }
+    },
+    "rotation": {
+        "center": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "facePoint",
+                "loc": "adjusted.nose",
+                "index": 9
+            },
+            "to": {
+                "type": "facePoint",
+                "loc": "adjusted.nose",
+                "index": 10
+            }
+        },
+        "angle": {
+            "type": "face-ref",
+            "float": {
+                "type": "atan2",
+                "from": {
+                    "type": "point",
+                    "loc": "adjusted.nose",
+                    "index": 9
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "adjusted.nose",
+                    "index": 10
+                }
+            }
+        }
+    },
+    "scale": {
+        "center": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "facePoint",
+                "loc": "adjusted.nose",
+                "index": 9
+            },
+            "to": {
+                "type": "facePoint",
+                "loc": "adjusted.nose",
+                "index": 10
+            }
+        },
+        "amount": {
+            "type": "face/ref",
+            "float": {
+                "type": "dist",
+                "from": {
+                    "type": "point",
+                    "loc": "adjusted.nose",
+                    "index": 9
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "adjusted.nose",
+                    "index": 10
+                }
+            }
+        }
+    }
+}

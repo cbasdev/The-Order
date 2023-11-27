@@ -1,0 +1,50 @@
+export declare type WebAssemblyImports = Array<{
+    name: string;
+    kind: string;
+}>;
+export declare type WebAssemblyExports = Array<{
+    module: string;
+    name: string;
+    kind: string;
+}>;
+export interface TutorialSDKModule {
+    HEAP8?: Int8Array;
+    HEAP16?: Int16Array;
+    HEAP32?: Int32Array;
+    HEAPU8?: Uint8Array;
+    HEAPU16?: Uint16Array;
+    HEAPU32?: Uint32Array;
+    HEAPF32?: Float32Array;
+    HEAPF64?: Float64Array;
+    cwrap?(name: string, returnType: string, params: Array<string>): any;
+    _malloc?(size: number): number;
+    _free?(ptr: number): void;
+    postRun?(): void;
+    canvas?: HTMLCanvasElement;
+    locateFile?(path: string, prefix: string): string;
+    print?(text: string): void;
+    printErr?(text: string): void;
+    instantiateWasm?(imports: WebAssemblyImports, successCallback: (module: WebAssembly.Module) => void): WebAssemblyExports;
+    request?: any;
+    cw_init?(width: number, height: number): void;
+    cw_setFaceTrackerData?(facePointsJsPtr: Uint8Array, size: number, imageWidth: number, imageHeight: number, fbX: number, fbY: number, fbW: number, fbH: number): void;
+    cw_resetTrackerData?(): void;
+    cw_setTutorial?(tutorialJSON: string): void;
+    cw_setStepIndex?(step: number): void;
+    cw_addImageToCache?(path: string, ptr: number, width: number, height: number, ch: number): void;
+    cw_addJSONToCache?(path: string, json: string): void;
+    cw_render?(ptr: number, width: number, height: number): void;
+    cw_resizeView?(width: number, height: number): void;
+    cw_startTutorial?(): void;
+    cw_pauseTutorial?(): void;
+    cw_resumeTutorial?(): void;
+    cw_stopTutorial?(): void;
+    cw_shouldDrawMakeup?(): boolean;
+    cw_shouldDrawTutorial?(): boolean;
+    cw_getProgress?(): number;
+    cw_setPlayCount?(count: number): void;
+    cw_setStepAnimationDuration?(duration: number): void;
+    cw_setDelayBeforeRepeat?(delay: number): void;
+    cw_setShowMakeupWhenStepDone?(show: boolean): void;
+    cw_setShouldDrawOriginal?(shouldDrawOriginal: boolean): void;
+}

@@ -1,0 +1,458 @@
+{
+    "version": 1,
+    "numGridRows": 15,
+    "numGridCols": 20,
+    "width": 250,
+    "height": 188,
+    "side": "left",
+    "deformationAreaFactor": 2.0,
+    "referencePoints": [
+        {
+            "loc": "eye",
+            "points": [
+                {
+                    "index": 0,
+                    "x": 78,
+                    "y": 118
+                },
+                {
+                    "index": 1,
+                    "x": 136,
+                    "y": 102
+                },
+                {
+                    "index": 2,
+                    "x": 199,
+                    "y": 133
+                },
+                {
+                    "index": 3,
+                    "x": 138,
+                    "y": 143
+                }
+            ]
+        },
+        {
+            "loc": "brow",
+            "points": [
+                {
+                    "index": 0,
+                    "x": 14,
+                    "y": 65
+                },
+                {
+                    "index": 1,
+                    "x": 84,
+                    "y": 38
+                },
+                {
+                    "index": 2,
+                    "x": 215,
+                    "y": 65
+                }
+            ]
+        }
+    ],
+    "translation": {
+        "type": "face-ref",
+        "point": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "point",
+                "loc": "eye",
+                "index": 0
+            },
+            "to": {
+                "type": "point",
+                "loc": "eye",
+                "index": 2
+            }
+        }
+    },
+    "rotation": {
+        "center": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "facePoint",
+                "loc": "eye",
+                "index": 0
+            },
+            "to": {
+                "type": "facePoint",
+                "loc": "eye",
+                "index": 2
+            }
+        },
+        "angle": {
+            "type": "face-ref",
+            "float": {
+                "type": "atan2",
+                "from": {
+                    "type": "point",
+                    "loc": "eye",
+                    "index": 0
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "eye",
+                    "index": 2
+                }
+            }
+        }
+    },
+    "scale": {
+        "center": {
+            "type": "mix",
+            "t": 0.5,
+            "from": {
+                "type": "facePoint",
+                "loc": "eye",
+                "index": 0
+            },
+            "to": {
+                "type": "facePoint",
+                "loc": "eye",
+                "index": 2
+            }
+        },
+        "amount": {
+            "type": "face/ref",
+            "float": {
+                "type": "dist",
+                "from": {
+                    "type": "point",
+                    "loc": "eye",
+                    "index": 0
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "eye",
+                    "index": 2
+                }
+            }
+        }
+    },
+    "warpPoints": [
+        {
+            "type": "bezier",
+            "from_t": 0.0,
+            "to_t": 0.66,
+            "step": 0.33,
+            "src_type": "ref",
+            "dst_type": "face",
+            "point1": {
+                "type": "point",
+                "loc": "eye",
+                "index": 0
+            },
+            "controlPoint": {
+                "type": "point",
+                "x": {
+                    "type": "point.x",
+                    "point": {
+                        "type": "mix",
+                        "t": 0.5,
+                        "from": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 0
+                        },
+                        "to": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 1
+                        }
+                    }
+                },
+                "y": {
+                    "type": "point.y",
+                    "point": {
+                        "type": "point",
+                        "loc": "eye",
+                        "index": 1
+                    }
+                }
+            },
+            "point2": {
+              "type": "point",
+              "loc": "eye",
+              "index": 1
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 2.0,
+            "point": {
+                "type": "point",
+                "loc": "eye",
+                "index": 1
+            }
+        },
+        {
+            "type": "bezier",
+            "from_t": 0.33,
+            "to_t": 0.66,
+            "step": 0.33,
+            "src_type": "ref",
+            "dst_type": "face",
+            "point1": {
+                "type": "point",
+                "loc": "eye",
+                "index": 1
+            },
+            "controlPoint": {
+                "type": "point",
+                "x": {
+                    "type": "point.x",
+                    "point": {
+                        "type": "mix",
+                        "t": 0.5,
+                        "from": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 1
+                        },
+                        "to": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 2
+                        }
+                    }
+                },
+                "y": {
+                    "type": "point.y",
+                    "point": {
+                        "type": "point",
+                        "loc": "eye",
+                        "index": 2
+                    }
+                }
+            },
+            "point2": {
+              "type": "point",
+              "loc": "eye",
+              "index": 2
+            }
+        },
+        {
+            "type": "bezier",
+            "from_t": 0.0,
+            "to_t": 0.66,
+            "step": 0.33,
+            "src_type": "ref",
+            "dst_type": "face",
+            "point1": {
+                "type": "point",
+                "loc": "eye",
+                "index": 2
+            },
+            "controlPoint": {
+                "type": "point",
+                "x": {
+                    "type": "point.x",
+                    "point": {
+                        "type": "mix",
+                        "t": 0.5,
+                        "from": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 2
+                        },
+                        "to": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 3
+                        }
+                    }
+                },
+                "y": {
+                    "type": "point.y",
+                    "point": {
+                        "type": "point",
+                        "loc": "eye",
+                        "index": 3
+                    }
+                }
+            },
+            "point2": {
+                "type": "point",
+                "loc": "eye",
+                "index": 3
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 2.0,
+            "point": {
+                "type": "point",
+                "loc": "eye",
+                "index": 3
+            }
+        },
+        {
+            "type": "bezier",
+            "from_t": 0.33,
+            "to_t": 0.66,
+            "step": 0.33,
+            "src_type": "ref",
+            "dst_type": "face",
+            "point1": {
+                "type": "point",
+                "loc": "eye",
+                "index": 0
+            },
+            "controlPoint": {
+                "type": "point",
+                "x": {
+                    "type": "point.x",
+                    "point": {
+                        "type": "mix",
+                        "t": 0.5,
+                        "from": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 0
+                        },
+                        "to": {
+                            "type": "point",
+                            "loc": "eye",
+                            "index": 3
+                        }
+                    }
+                },
+                "y": {
+                    "type": "point.y",
+                    "point": {
+                        "type": "point",
+                        "loc": "eye",
+                        "index": 3
+                    }
+                }
+            },
+            "point2": {
+                "type": "point",
+                "loc": "eye",
+                "index": 3
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "point",
+                "loc": "brow",
+                "index": 0
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "mix",
+                "t": 0.66,
+                "from": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 0
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 1
+                }
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "mix",
+                "t": 0.33,
+                "from": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 0
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 1
+                }
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "point",
+                "loc": "brow",
+                "index": 1
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "mix",
+                "t": 0.66,
+                "from": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 1
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 2
+                }
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "mix",
+                "t": 0.33,
+                "from": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 1
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "brow",
+                    "index": 2
+                }
+            }
+        },
+        {
+            "type": "weightedPointPair",
+            "src_type": "ref",
+            "dst_type": "face",
+            "weight": 0.5,
+            "point": {
+                "type": "point",
+                "loc": "brow",
+                "index": 2
+            }
+        }
+    ]
+}

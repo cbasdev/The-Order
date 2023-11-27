@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "numGridRows": 20,
+  "numGridCols": 15,
+  "width": 275,
+  "height": 400,
+  "side": "left",
+  "deformationAreaFactor": 3.0,
+  "referencePoints": [
+    {
+      "loc": "forehead",
+      "points": [
+        {
+          "index": 0,
+          "x": 244,
+          "y": -40
+        },
+        {
+          "index": 1,
+          "x": 407,
+          "y": -55
+        }
+      ]
+    },
+    {
+      "loc": "face",
+      "points": [
+        {
+          "index": 0,
+          "x": 138,
+          "y": 271
+        },
+        {
+          "index": 1,
+          "x": 155,
+          "y": 400
+        }
+      ]
+    },
+    {
+      "loc": "brow",
+      "points": [
+        {
+          "index": 0,
+          "x": 154,
+          "y": 180
+        },
+        {
+          "index": 1,
+          "x": 213,
+          "y": 151
+        }
+      ]
+    },
+    {
+      "loc": "extendedBrow",
+      "points": [
+        {
+          "index": 0,
+          "x": 154,
+          "y": 130
+        },
+        {
+          "index": 1,
+          "x": 206,
+          "y": 94
+        },
+        {
+          "index": 2,
+          "x": 281,
+          "y": 104
+        }
+      ]
+    },
+    {
+      "loc": "eye",
+      "points": [
+        {
+          "index": 0,
+          "x": 216,
+          "y": 241
+        },
+        {
+          "index": 3,
+          "x": 271,
+          "y": 255
+        }
+      ]
+    },
+    {
+      "loc": "leftEye",
+      "points": [
+        {
+          "index": 0,
+          "x": 216,
+          "y": 241
+        }
+      ]
+    },
+    {
+      "loc": "rightEye",
+      "points": [
+        {
+          "index": 2, 
+          "x": 594,
+          "y": 243
+        }
+      ]
+    }
+  ],
+  "translation": {
+    "type": "face-ref",
+    "point": {
+      "type": "point",
+      "loc": "extendedBrow",
+      "index": 0
+    }
+  },
+  "rotation": {
+    "center": {
+      "type": "facePoint",
+      "loc": "face",
+      "index": 0
+    },
+    "angle": {
+      "type": "face-ref",
+      "float": {
+        "type": "atan2",
+        "from": {
+          "type": "point",
+          "loc": "face",
+          "index": 0
+        },
+        "to": {
+          "type": "point",
+          "loc": "forehead",
+          "index": 0
+        }
+      }
+    }
+  },
+  "scale": {
+    "center": {
+      "type": "facePoint",
+      "loc": "face",
+      "index": 0
+    },
+    "amount": {
+      "type": "face/ref",
+      "float": {
+        "type": "dist",
+        "from": {
+          "type": "point",
+          "loc": "face",
+          "index": 1
+        },
+        "to": {
+          "type": "point",
+          "loc": "forehead",
+          "index": 0
+        }
+      }
+    }
+  },
+  "warpPoints": [
+    {
+      "type": "mix",
+      "from_t": 0,
+      "to_t": 0,
+      "step": 0.1,
+      "src_type": "ref",
+      "dst_type": "face",
+      "from": {
+        "type": "point",
+        "loc": "face",
+        "index": 0
+      },
+      "to": {
+        "type": "point",
+        "loc": "face",
+        "index": 1
+      },
+      "weight": 1.0
+    },
+    {
+      "type": "bezierThrough",
+      "from_t": 0,
+      "to_t": 1,
+      "step": 0.2,
+      "src_type": "ref",
+      "dst_type": "face",
+      "point1": {
+        "type": "point",
+        "loc": "extendedBrow",
+        "index": 0
+      },
+      "point2": {
+        "type": "point",
+        "loc": "extendedBrow",
+        "index": 1
+      },
+      "point3": {
+        "type": "point",
+        "loc": "extendedBrow",
+        "index": 2
+      },
+      "weight": 1.0
+    },
+    {
+      "type": "bezierThrough",
+      "from_t": 0,
+      "to_t": 1,
+      "step": 0.2,
+      "src_type": "ref",
+      "dst_type": "face",
+      "point1": {
+        "type": "+",
+        "left": {
+          "type": "point",
+          "loc": "forehead",
+          "index": 0
+        },
+        "right": {
+          "type": "-",
+          "left": {
+            "type": "point",
+            "loc": "forehead",
+            "index": 0
+          },
+          "right": {
+            "type": "point",
+            "loc": "forehead",
+            "index": 1
+          }
+        }
+      },
+      "point2": {
+        "type": "point",
+        "loc": "forehead",
+        "index": 0
+      },
+      "point3": {
+        "type": "point",
+        "loc": "forehead",
+        "index": 1
+      },
+      "weight": 0.7
+    }
+  ]
+}

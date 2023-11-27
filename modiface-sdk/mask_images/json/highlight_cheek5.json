@@ -1,0 +1,121 @@
+{
+    "version": 1,
+    "numGridRows": 2,
+    "numGridCols": 2,
+    "width": 700,
+    "height": 700,
+    "side": "right",
+    "referencePoints": [
+        {
+            "loc": "cheek",
+            "points": [
+                {
+                    "index": 2,
+                    "x": 306,
+                    "y": 732
+                },
+                {
+                    "index": 3,
+                    "x": 286,
+                    "y": 368
+                }
+            ]
+        },
+        {
+            "loc": "face",
+            "points": [
+                {
+                    "index": 8,
+                    "x": 518,
+                    "y": 304
+                }
+            ]
+        },
+        {
+            "loc": "nose",
+            "points": [
+                {
+                    "index": 6,
+                    "x": 67,
+                    "y": 521
+                }
+            ]
+        },
+        {
+            "loc": "eye",
+            "points": [
+                {
+                    "index": 1,
+                    "x": 232,
+                    "y": 88
+                },
+                {
+                    "index": 3,
+                    "x": 238,
+                    "y": 188
+                }
+            ]
+        },
+        {
+            "loc": "extendedOuterMouth",
+            "points": [
+                {
+                    "index": 6,
+                    "x": 174,
+                    "y": 776
+                }
+            ]
+        }
+    ],
+    "translation": {
+        "type": "face-ref",
+        "loc": "cheek",
+        "index": 3
+    },
+    "rotation": {
+        "center": {
+            "type": "facePoint",
+            "loc": "cheek",
+            "index": 3
+        },
+        "angle": {
+            "type": "face-ref",
+            "float": {
+                "type": "atan2",
+                "from": {
+                    "type": "point",
+                    "loc": "cheek",
+                    "index": 2
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "cheek",
+                    "index": 3
+                }
+            }
+        }
+    },
+    "scale": {
+        "center": {
+            "type": "facePoint",
+            "loc": "cheek",
+            "index": 3
+        },
+        "amount": {
+            "type": "face/ref",
+            "float": {
+                "type": "dist",
+                "from": {
+                    "type": "point",
+                    "loc": "face",
+                    "index": 8
+                },
+                "to": {
+                    "type": "point",
+                    "loc": "nose",
+                    "index": 6
+                }
+            }
+        }
+    }
+}
